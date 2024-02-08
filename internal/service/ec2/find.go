@@ -4648,7 +4648,7 @@ func FindTransitGatewayRoutes(ctx context.Context, conn *ec2.EC2, input *ec2.Sea
 		return nil, err
 	}
 
-	if output == nil || len(output.Routes) == 0 {
+	if output == nil {
 		return nil, tfresource.NewEmptyResultError(input)
 	}
 
